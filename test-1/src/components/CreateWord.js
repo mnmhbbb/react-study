@@ -51,7 +51,7 @@ export default function CreateWord() {
         <select ref={dayRef}>
           {days.map((v) => {
             return (
-              <option key={v.id} value={v.value}>
+              <option key={v.id} value={v.day}>
                 {v.day}
               </option>
             );
