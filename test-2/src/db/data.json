@@ -1,0 +1,71 @@
+{
+  "days": [
+    {
+      "id": 1,
+      "day": 1
+    },
+    {
+      "id": 2,
+      "day": 2
+    },
+    {
+      "id": 3,
+      "day": 3
+    },
+    {
+      "day": 4,
+      "id": 4
+    }
+  ],
+  "words": [
+    {
+      "id": 2,
+      "day": 2,
+      "eng": "strategy",
+      "kor": "전략",
+      "isDone": false
+    },
+    {
+      "id": 3,
+      "day": 3,
+      "eng": "forbidden",
+      "kor": "금지된",
+      "isDone": false
+    },
+    {
+      "eng": "apple",
+      "kor": "사과",
+      "day": 1,
+      "isDone": true,
+      "id": 4
+    },
+    {
+      "eng": "exceed",
+      "kor": "초과하다",
+      "day": 2,
+      "isDone": false,
+      "id": 5
+    },
+    {
+      "eng": "cat",
+      "kor": "고양이",
+      "day": 1,
+      "isDone": false,
+      "id": 7
+    },
+    {
+      "eng": "perspective",
+      "kor": "관점, 시각",
+      "day": 3,
+      "isDone": false,
+      "id": 8
+    },
+    {
+      "eng": "assign",
+      "kor": "선임하다",
+      "day": "1",
+      "isDone": false,
+      "id": 9
+    }
+  ]
+}
