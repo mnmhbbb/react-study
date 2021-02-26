@@ -1,71 +1,39 @@
 {
-  "days": [
+  "folders": [
     {
       "id": 1,
-      "day": 1
+      "folder": "테스트"
     },
     {
-      "id": 2,
-      "day": 2
+      "folder": 0,
+      "id": 2
     },
     {
-      "id": 3,
-      "day": 3
-    },
-    {
-      "day": 4,
-      "id": 4
+      "folder": "새폴더다냥",
+      "id": 3
     }
   ],
   "words": [
     {
-      "id": 2,
-      "day": 2,
-      "eng": "strategy",
-      "kor": "전략",
-      "isDone": false
-    },
-    {
-      "id": 3,
-      "day": 3,
-      "eng": "forbidden",
-      "kor": "금지된",
-      "isDone": false
-    },
-    {
-      "eng": "apple",
-      "kor": "사과",
-      "day": 1,
+      "eng": "test",
+      "kor": "테스트",
+      "folder": "테스트",
       "isDone": true,
-      "id": 4
-    },
-    {
-      "eng": "exceed",
-      "kor": "초과하다",
-      "day": 2,
-      "isDone": false,
-      "id": 5
+      "id": 1
     },
     {
       "eng": "cat",
       "kor": "고양이",
-      "day": 1,
+      "folder": "hahaha",
       "isDone": false,
-      "id": 7
+      "id": 2
     },
     {
-      "eng": "perspective",
-      "kor": "관점, 시각",
-      "day": 3,
+      "eng": "hello",
+      "kor": "안녕",
+      "folder": "테스트",
       "isDone": false,
-      "id": 8
-    },
-    {
-      "eng": "assign",
-      "kor": "선임하다",
-      "day": "1",
-      "isDone": false,
-      "id": 9
+      "id": 3
     }
   ]
 }

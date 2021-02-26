@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import CreateDay from "./components/CreateDay";
+import CreateFolder from "./components/CreateFolder";
 import CreateWord from "./components/CreateWord";
-import Day from "./components/Day";
-import DayList from "./components/DayList";
+import Folder from "./components/Folder";
+import FolderList from "./components/FolderList";
 import Header from "./components/Header";
 
 function App() {
@@ -12,16 +12,16 @@ function App() {
         <Header />
         <Switch>
           <Route exact path="/">
-            <DayList />
+            <FolderList />
           </Route>
-          <Route path="/day/:day">
-            <Day />
+          <Route path="/folder/:folder">
+            <Folder />
           </Route>
           <Route path="/create_word">
             <CreateWord />
           </Route>
-          <Route path="/create_day">
-            <CreateDay />
+          <Route path="/create_folder">
+            <CreateFolder />
           </Route>
         </Switch>
       </div>
