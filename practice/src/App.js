@@ -1,7 +1,7 @@
 import InputSample from "./components/InputSample";
 
 function App() {
-  return;
+  return <InputSample />;
 }
 
 export default App;

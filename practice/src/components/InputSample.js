@@ -1,5 +1,4 @@
-import { useRef, useState } from "react";
-
+import React, { useState } from "react";
 export default function InputSample() {
   const [inputs, setInputs] = useState({
     name: "",
@@ -8,35 +7,42 @@ export default function InputSample() {
 
   const { name, nickname } = inputs;
 
-  const onChange = (e) => {
-    //e.target.value
-    //e.target.name
+  function onChangeInput(e) {
+    console.log(e.target.value);
+    console.log(e.target.name);
     const { value, name } = e.target;
     setInputs({
       ...inputs,
-      [name]: value, // name 키를 가진 값을 value 로 설정!!!
+      [name]: value,
     });
-  };
+  }
 
-  const onReset = () => {
+  function onSubmitForm(e) {
+    e.preventDefault();
+  }
+
+  function onReset() {
     setInputs({
       name: "",
       nickname: "",
     });
-    nameRef.current.focus();
-  };
-
-  const nameRef = useRef();
+  }
 
   return (
-    <div>
-      <input name="name" onChange={onChange} value={name} ref={nameRef} />
-      <input name="nickname" onChange={onChange} value={nickname} />
+    <form onSubmit={onSubmitForm}>
+      <label>이름</label>
+      <input name="name" type="text" value={name} onChange={onChangeInput} />
+      <label>닉네임</label>
+      <input
+        name="nickname"
+        type="text"
+        value={nickname}
+        onChange={onChangeInput}
+      />
       <button onClick={onReset}>초기화</button>
-      <div>
-        <b>값:</b>
-        {name} ({nickname})
-      </div>
-    </div>
+      <p>
+        미리보기: {name}, {nickname}
+      </p>
+    </form>
   );
 }
