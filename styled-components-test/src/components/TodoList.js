@@ -1,14 +1,31 @@
 import React from "react";
+import styled from "styled-components";
 import TodoItem from "./TodoItem";
+import { useTodoState } from "../TodoContext";
 
-function TodoList({ item }) {
+const TodoListBlock = styled.div`
+  height: 300px;
+  text-align: start;
+  padding: 5px 28px;
+  overflow-y: scroll;
+`;
+
+const TodoList = () => {
+  const todos = useTodoState();
   return (
-    <div>
-      {item.map((item) => {
-        return <TodoItem key={item.id} item={item} />;
+    <TodoListBlock>
+      {todos.map((todo) => {
+        return (
+          <TodoItem
+            key={todo.id}
+            id={todo.id}
+            text={todo.text}
+            checked={todo.checked}
+          />
+        );
       })}
-    </div>
+    </TodoListBlock>
   );
-}
+};
 
 export default TodoList;

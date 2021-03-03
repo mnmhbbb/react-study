@@ -1,41 +1,41 @@
-import React, { useState } from "react";
+import React from "react";
+import { createGlobalStyle } from "styled-components";
 import TodoHeader from "./components/TodoHeader";
 import TodoInput from "./components/TodoInput";
 import TodoList from "./components/TodoList";
+import TodoTable from "./components/TodoTable";
+import TodoProvider from "./TodoContext";
+
+const GlobalStyle = createGlobalStyle`
+  *{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  body{
+    font-family: Noto Sans KR, sans-serif;
+    background: #e5e5e5;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.04);
+  }
+`;
 
 function App() {
-  const [list, setList] = useState({
-    text: "",
-    checked: false,
-  });
-
-  const todos = {
-    item: [
-      {
-        id: 1,
-        text: "밥먹기",
-        checked: false,
-      },
-      {
-        id: 2,
-        text: "산책하기",
-        checked: false,
-      },
-      {
-        id: 3,
-        text: "청소하기",
-        checked: true,
-      },
-    ],
-  };
-
-  const { item } = todos;
-
   return (
     <div>
-      <TodoHeader item={item} />
-      <TodoList item={item} />
-      <TodoInput />
+      <TodoProvider>
+        <GlobalStyle />
+        <TodoTable>
+          <TodoHeader />
+          <TodoList />
+          <TodoInput />
+        </TodoTable>
+      </TodoProvider>
     </div>
   );
 }
