@@ -124,3 +124,21 @@
           alert("추가되었습니다.");
           history.push(`/folder/${folderRef.current.value}`);
   ```
+### 7. 너무나 작고 소중한 체크박스 키우기
+  - html 기본 input 태그는 아무래도 너무 작아서 클릭하기가 힘들다.
+  - `react-icons`를 설치해서 아이콘을 불러온 뒤, input의 기능은 그대로 실행하기 위해 다음과 같이 `label`태그로 묶고, input을 숨겼다.
+  ```javascript
+       <label>
+            <input className="hide" type="checkbox" checked={isDone} onChange={toggleDone} />
+            <div>{isDone ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}</div>
+          </label>
+  ```
+  ```css
+  /* 실제 input 을 숨기기 위한 코드 */
+  .hide {
+    width: 0;
+    height: 0;
+    position: absolute;
+    opacity: 0;
+  }
+  ```
