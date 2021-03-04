@@ -113,6 +113,7 @@
     (options에 아무것도 넘기지 않으면 요청은 GET 메서드로 진행됨!)  
 ### 6. useHistory()
   - 새로운 단어나 폴더를 생성했을 때, 바로 확인시켜줄 수 있게 해당 화면으로 페이지 전환을 하려면 useHistory를 사용한다.
+  - useHistory를 통해 쉽게 history 객체에 접근할 수 있게 된다.
   - 예를 들어, 단어를 추가하면 해당 단어가 담긴 폴더 페이지로 바로 이동한다.
   ```javascript
   const history = useHistory();
