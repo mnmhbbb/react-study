@@ -1,4 +1,5 @@
 ## 리액트 연습
+![gif](https://user-images.githubusercontent.com/66292371/110033823-39db7600-7d7d-11eb-8e8b-d59e82cf033a.gif)
 - 코딩앙마님의 [강의](https://youtu.be/05uFo_-SGXU)을 보고 공부한 뒤, 몇 가지 기능을 수정/추가 해보았다.
 - json-server를 이용하여 간단한 `data.json` 파일에서 REST API 연습을 하였다.
   - 백 전용으로 사용할 터미널을 하나 추가하고, `npm i -g json-server` 설치 후,    
