@@ -56,7 +56,7 @@ export default function CreateWord() {
         </select>
       </div>
       <button style={{ opacity: isloading ? 0.3 : 1 }}>
-        {isloading ? "저장 중..." : "추가"}
+        {isloading ? "저장 중" : "추가"}
       </button>
     </form>
   );

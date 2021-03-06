@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { MdCheckBoxOutlineBlank, MdCheckBox } from "react-icons/md";
 
 export default function Word({ word: w }) {
   const [isShow, setIsShow] = useState(false);
@@ -44,13 +45,21 @@ export default function Word({ word: w }) {
     <>
       <tr className={isDone ? "off" : ""}>
         <td>
-          <input type="checkbox" checked={isDone} onChange={toggleDone} />
+          <label>
+            <input
+              className="hide"
+              type="checkbox"
+              checked={isDone}
+              onChange={toggleDone}
+            />
+            <div>{isDone ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}</div>
+          </label>
         </td>
         <td>{word.eng}</td>
         <td>{isShow && word.kor}</td>
         <td>
           <button onClick={toggleIsShow}>
-            {isShow ? "뜻 보기" : "뜻 숨기기"}
+            {isShow ? "숨기기" : "뜻 보기"}
           </button>
           <button className="btn_del" onClick={del}>
             삭제

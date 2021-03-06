@@ -2,7 +2,7 @@
   "folders": [
     {
       "id": 2,
-      "folder": "기초 영단어"
+      "folder": "test"
     },
     {
       "folder": "새폴더",
@@ -11,11 +11,25 @@
   ],
   "words": [
     {
+      "eng": "subtle",
+      "kor": "미묘한, 감지하기 힘든",
+      "folder": "test",
+      "isDone": false,
+      "id": 7
+    },
+    {
+      "eng": "hearth",
+      "kor": "난로",
+      "folder": "test",
+      "isDone": false,
+      "id": 8
+    },
+    {
       "eng": "cat",
       "kor": "고양이",
       "folder": "새폴더",
       "isDone": false,
-      "id": 1
+      "id": 9
     }
   ]
 }
