@@ -35,7 +35,7 @@
   - 쿼리스트링을 사용하면 주소에 부가적인 정보를 담을 수 있다.
   - useParams를 통해 받아온 정보로 해당 폴더 안에 담긴 단어를 `fetch`해온다.
   ```javascript
-    useEffect(() => {
+  useEffect(() => {
     fetch(`http://localhost:3001/words?folder=${folder}`)
       .then((res) => {
         return res.json();
